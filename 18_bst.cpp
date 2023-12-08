@@ -95,57 +95,100 @@ class BST{
 				return;
 			}
 			if(tree->rchild == NULL) 
-				cout<<tree->data<<endl;
+				cout<<"Largest element: "<<tree->data<<endl;
 				return;
 			findLargestele(tree->rchild);
+			return;
 		}
 		
-		void remove(int Key){
-			it(!root) return;
-			Node *x = root;
-			Node *parent = NULL;
-			while(x && x->data!=key){
-				parent = x;
-				if(key< x->data)
-					x = x->lchild;
-				else
-					x = x->rchild;
-			}
-			if (!x){
-				cout<<"Data Not present\n";
+		void findSmallestele(Node* tree){
+			//cout<<"here 1\n";
+			if (!tree){
+				cout<<"Empty Tree\n";
 				return;
 			}
-			if(!x->lchild || !x->rchild){
+			//cout<<"here 2\n";
+			if (tree->lchild==NULL){
+				cout<<"Smallest element: "<<tree->data<<"\n";
+				return;
+			}
+			//cout<<tree->data<<" Recursive call to "<<tree->lchild<<endl;
+			findSmallestele(tree->lchild);
+			return;
 				
+		}
+
+		void remove(int key){
+			if(!root) return;
+			Node* x = root;
+			Node* parent = NULL;
+			while(x && x->data != key){
+				parent = x;
+				if(key < x->data) x = x->lchild;
+				else x = x->rchild;
+			}
+			if(!x){
+				cout<<"data is not present\n";
+				return;
+			}
+			if (!x->lchild || !x->rchild){
+				Node *ptr;
+				if(!x->lchild) ptr = x->rchild;
+				else ptr = x->lchild;
+				if(!parent){
+					delete root;
+					root = ptr; 
+					return;
+				}
+				if (x == parent->lchild) parent->lchild = ptr;
+				else parent->rchild = ptr;
+				delete x;
+				return;
+			}
+			else{
+				Node* succ = x->rchild;
+				Node* pSucc = NULL;
+				while(succ->lchild){
+					pSucc = succ;
+					succ = succ->lchild;
+				}
+				x->data = succ->data;
+				if(!pSucc) x->rchild = succ->rchild;
+				else pSucc->lchild = succ->lchild;
+				delete succ;
+				return;
 			}
 		}
 		
-		int hieght(Node * tree){
+		int height(Node * tree){
 			int L,R;
 			if (!tree) return 0;
-			L = hieght(tree->lchild);
-			R = hieght(tree->rchild);
+			L = height(tree->lchild);
+			R = height(tree->rchild);
 			if (L>R)
 				return L+1;
 			return R+1;
 		}
+
+		
 };
 
 int main(void){
 	BST tr;
 	int ch;
-	cout<<"---- BST Operations ----\n";
-	cout<<"1. Insert\n";
-	cout<<"2. Inorder Traversal\n";
-	cout<<"3. Preorder Traversal\n";
-	cout<<"4. Postorder Traversal\n";
-	cout<<"5. Search\n";
-	cout<<"6. Find largest element\n";
-	cout<<"7. Element Remove\n";
-	cout<<"8. Height of Tree\n";
 	
-	cout<<"10. Exit\n";
 	do{
+		cout<<"\n\n---- BST Operations ----\n";
+		cout<<"1. Insert\n";
+		cout<<"2. Inorder Traversal\n";
+		cout<<"3. Preorder Traversal\n";
+		cout<<"4. Postorder Traversal\n";
+		cout<<"5. Search\n";
+		cout<<"6. Find largest element\n";
+		cout<<"7. Find Smallest element\n";
+		cout<<"8. Height of Tree\n";
+		cout<<"9. Element Remove\n";
+		cout<<"10. Exit\n\n";
 		cout<<"Enter your choice: ";
 		cin>>ch;
 		switch(ch){
@@ -180,8 +223,17 @@ int main(void){
 			case 6:
 				tr.findLargestele(tr.getRoot());
 				break;
+			case 7:
+				tr.findSmallestele(tr.getRoot());
+				break;
 			case 8:
-				cout<<"Height of the Tree is: "<<tr.hieght(tr.getRoot())<<endl;
+				cout<<"Height of the Tree is: "<<tr.height(tr.getRoot())<<endl;
+				break;
+			case 9:
+				int k1;
+				cout<<"Enter the element to remove: ";
+				cin>>k1;
+				tr.remove(k1);
 				break;
 			case 10:
 				break;

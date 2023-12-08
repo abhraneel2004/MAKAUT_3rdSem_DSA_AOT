@@ -42,7 +42,7 @@ class QueueLL{
                 
 			}
 
-            void pop(){
+            void delete_(){
                 if(!head){
                     cout<<"Queue Underflow!"<<endl;
                     return;
@@ -92,10 +92,10 @@ int main(void){
 				int val;
 				cout<<"Enter the data: ";
 				cin>>val;
-				l.push(val);
+				l.insert(val);
 				break;
             case 2:
-                l.pop();
+                l.delete_();
                 break;
 
             case 3:

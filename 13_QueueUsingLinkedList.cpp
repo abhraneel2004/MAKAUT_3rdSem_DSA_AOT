@@ -99,7 +99,7 @@ int main(void){
                 break;
 
             case 3:
-                cout<<"Displaying the Stack: ";
+                cout<<"Displaying the Queue: ";
 				l.display();
                 cout<<"\n";
                 break;

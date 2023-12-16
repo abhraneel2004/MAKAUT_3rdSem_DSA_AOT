@@ -31,18 +31,8 @@ public:
     {
         Node *newNode = new Node(value);
 
-        if (!head)
-        {
-            head = newNode;
-        }
-
-        else
-        {
-            Node *temp = head;
-            while (temp->next)
-                temp = temp->next;
-            temp->next = newNode;
-        }
+        newNode->next = head;
+        head = newNode;
     }
 
     void pop()
@@ -52,20 +42,8 @@ public:
             cout << "Stack Underflow!" << endl;
             return;
         }
-        if (!head->next)
-        {
-            delete head;
-            head = NULL;
-            return;
-        }
-        Node *temp = head;
-        Node *prev = nullptr;
-        while (temp->next)
-        {
-            prev = temp;
-            temp = temp->next;
-        }
-        prev->next = nullptr;
+        Node * temp = head;
+        head = head->next;
         delete temp;
         return;
     }

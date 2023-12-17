@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/00_WorkSpace/dsa_lab_codes",
-      "program": "d:/00_WorkSpace/dsa_lab_codes/build/Debug/outDebug",
+      "cwd": "d:/00_WorkSpace/dsa_lab_codes/C",
+      "program": "d:/00_WorkSpace/dsa_lab_codes/C/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

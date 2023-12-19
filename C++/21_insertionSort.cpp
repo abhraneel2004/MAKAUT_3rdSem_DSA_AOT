@@ -37,4 +37,5 @@ int main(void){
         cout<<arr[i]<<", ";
     }
     cout<<arr[i]<<endl;
+    return 0;
 }

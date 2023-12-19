@@ -276,4 +276,5 @@ int main(void)
             break;
         }
     } while (ch != 11);
+    return 0;
 }

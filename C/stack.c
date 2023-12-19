@@ -73,5 +73,5 @@ int main(void){
                 break;
         }
     }while(ch!=5);
-    
+    return 0;
 }

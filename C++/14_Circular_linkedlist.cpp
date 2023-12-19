@@ -125,4 +125,5 @@ int main(void){
     list.delend();
     cout<<"After all deletions: ";
     list.display();
+    return 0;
 }

@@ -151,4 +151,5 @@ int main(void){
     list.delitem(30);
     cout<<"After all deletions: ";
     list.display();
+    return 0;
 }

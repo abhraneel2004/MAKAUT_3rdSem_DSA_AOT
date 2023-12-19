@@ -3,12 +3,12 @@ using namespace std;
 
 int main(void){
 	int n, coeff;
-	printf("Enter no. of rows: ");
-	scanf("%d",&n);
+	cout<<"Enter no. of rows: ";
+	cin>>n;
 	for (int i =0; i<n; i++){
-		if(i%2==1)printf("\t");
+		if(i%2==1)cout<<"\t";
 		for (int k =0; k<((n-i)/2); k++)
-			printf("\t\t");
+			cout<<"\t\t";
 		for (int j = 0; j<=i; j++){
 			if (i==0|| j==0){
 				coeff=1;
@@ -16,10 +16,10 @@ int main(void){
 			else{
 				coeff = coeff*(i-j+1)/j;
 			}
-			printf("\t%d\t", coeff);
+			cout<<"\t%d\t", coeff;
 			
 		}
-		printf("\n");
+		cout<<"\n";
 	}
 	return 0;
 }

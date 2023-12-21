@@ -15,52 +15,67 @@ public:
 	{
 		return front == -1;
 	}
-	void enqueue(int item)
+
+	void insert(int data)
 	{
-		if (isFull())
+		if (front == (rear + 1) % MAX)
 		{
-			cout << "The queue is Full." << endl;
+			cout << "Queue is Full";
+			return;
 		}
 		if (front == -1)
-		{
 			front = rear = 0;
-		}
 		else
 			rear = (rear + 1) % MAX;
-		cqueue[rear] = item;
+		cqueue[rear] = data;
 	}
 
-	void dequeue()
+	void remove_()
 	{
-		if (isEmpty())
-			cout << "The queue is empty." << endl;
-		cout << "Deleted Item is: " << cqueue[front] << endl;
+		if (front == -1)
+		{
+			cout << "Queue Underflow\n";
+			return;
+		}
 		if (front == rear)
 			front = rear = -1;
 		else
 			front = (front + 1) % MAX;
 	}
-	void cqdisplay()
+
+	void peek()
+	{
+		if (front == -1)
+		{
+			cout << "Queue Underflow\n";
+			return;
+		}
+		cout << "Queue Front: " << cqueue[front] << endl;
+	}
+
+	void display()
 	{
 		int i;
 		if (front == -1)
 		{
-			cout << "Queue is empty" << endl;
+			cout << "Queue Underflow\n";
 			return;
 		}
-		cout << "\n\nThe elements of the Queue are:\n";
+
 		if (front <= rear)
 		{
+			// cout<<"\n%d---%d\n", temp,rear);
 			for (i = front; i <= rear; i++)
-				cout << cqueue[i] << endl;
+				cout << cqueue[i] << "-> ";
 		}
 		else
 		{
 			for (i = front; i <= MAX - 1; i++)
-				cout << cqueue[i] << endl;
+				cout << cqueue[i]<<"-> ";
 			for (i = 0; i <= rear; i++)
-				cout << cqueue[i] << endl;
+				cout << cqueue[i]<<"-> ";
 		}
+		cout << "NULL\n";
 	}
 
 	Cqueue()
@@ -87,15 +102,15 @@ int main(void)
 		case 1:
 			cout << "Enter your data: ";
 			cin >> item;
-			cq.enqueue(item);
+			cq.insert(item);
 			break;
 
 		case 2:
-			cq.dequeue();
+			cq.remove_();
 			break;
 
 		case 3:
-			cq.cqdisplay();
+			cq.display();
 			break;
 
 		case 4:

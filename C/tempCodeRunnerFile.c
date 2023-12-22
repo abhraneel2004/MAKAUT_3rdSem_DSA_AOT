@@ -1,3 +1,0 @@
-remove_();
-    display();
-    

@@ -83,6 +83,7 @@ int main(void){
                 peek();
                 break;
             case 5:
+                printf("\n-->\tExiting the Program\t<--\n");
                 break;
             default: 
                 printf("Invalid Choice");

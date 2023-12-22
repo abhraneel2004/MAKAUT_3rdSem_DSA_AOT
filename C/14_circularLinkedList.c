@@ -238,6 +238,7 @@ int main(void)
             display();
             break;
         case 8:
+            printf("\n-->\tExiting the Program\t<--\n");
             break;
         default:
             printf("Invalid choice\n");

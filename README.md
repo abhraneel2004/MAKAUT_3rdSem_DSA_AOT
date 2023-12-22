@@ -154,3 +154,6 @@ We appreciate the open-source community and contributors for making this project
 ---
 
 **Note:** Replace `filename` and `output_name` with the appropriate names for your code file and desired output executable.
+
+
+<img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" alt="Coding GIF" style="width: 100vw; overflow:hidden; " >

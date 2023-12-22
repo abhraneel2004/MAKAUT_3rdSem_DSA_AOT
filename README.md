@@ -138,13 +138,10 @@ Certainly! Below is an explanation of the commands for forking and contributing 
 
    ![Create Pull Request](gifs/create_pr.gif)
 
-Congratulations! You've successfully forked the repository, made changes, and created a pull request. Your contributions are valuable to the open-source community!
+## Points to remember:
+- Add only code file
+- Do not add .exe or .out file
 
-Feel free to explore, learn, and contribute further to this project. If you have any questions or encounter issues, don't hesitate to ask for help.
-
-Happy coding! 🚀
-
-Feel free to explore, learn, and contribute to this open-source project. We appreciate your pull requests, bug reports, and feature suggestions. Happy coding!
 
 ![Open Source GIF](gifs/open_source.gif)
 

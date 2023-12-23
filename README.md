@@ -1,10 +1,6 @@
 # Data Structures and Algorithms in C/C++/Python
 Welcome to the Data Structures and Algorithms repository! This repository contains implementations of various data structures and algorithms in C and C++. Whether you're a beginner looking to learn or an experienced developer seeking reference implementations, you've come to the right place.
 
-<div>
-       <img src="https://media.giphy.com/media/u1WhXLjwgcXpHJBMRM/giphy.gif" alt="Coding GIF" style="width: 11vw; overflow:hidden; " >
-</div>
-
 ## Table of Contents
 
 1. [Array](#array)

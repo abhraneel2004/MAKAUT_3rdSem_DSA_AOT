@@ -2,7 +2,7 @@
 Welcome to the Data Structures and Algorithms repository! This repository contains implementations of various data structures and algorithms in C and C++. Whether you're a beginner looking to learn or an experienced developer seeking reference implementations, you've come to the right place.
 
 <div>
-       <img src="https://media.giphy.com/media/u1WhXLjwgcXpHJBMRM/giphy.gif" alt="Coding GIF" style="width: max(60px,11vw; overflow:hidden; " >
+       <img src="https://media.giphy.com/media/u1WhXLjwgcXpHJBMRM/giphy.gif" alt="Coding GIF" style="width: max(20px,11vw; overflow:hidden; " >
 </div>
 
 ## Table of Contents

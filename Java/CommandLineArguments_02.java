@@ -1,7 +1,8 @@
-package ilkProje;
+package JavaPack;
 
 public class CommandLineArguments_02 {
-
+	//EXAMPLE COMMAND CMD or Linux_Shell
+	//java -jar CommandLineArguments_02.jar name , surName , class , id , schoolName
 	public static void main(String[] args) {
 		
 		int argCount = args.length;

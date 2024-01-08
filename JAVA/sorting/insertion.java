@@ -1,3 +1,4 @@
+package JAVA.sorting;
 import java.util.Scanner;
 
 class insertion{

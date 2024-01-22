@@ -52,4 +52,6 @@ int main(void){
         cout<<arr[i]<<"\t";
     }
     cout<<endl;
+
+    return 0;
 }

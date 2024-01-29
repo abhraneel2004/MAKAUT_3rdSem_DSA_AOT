@@ -23,7 +23,7 @@ void merge(int arr[], int si, int mid, int ei){
 
 void mergeSort(int arr[], int si, int ei){
     if(si>=ei) return;
-    int mid = si+ (ei-si)/2;
+    int mid = si+ (ei-si)/2; // (ei+si)/2
     mergeSort(arr, si, mid);
     mergeSort(arr, mid+1, ei);
     merge(arr, si, mid, ei);

@@ -27,6 +27,6 @@ int main(void){
     if (idx==-1)
         cout<<"Element not found in the array\n";
     else
-        cout<<"Element found at position "<<idx<<endl;
+        cout<<"Element found at index "<<idx<<endl;
     return 0;
 }

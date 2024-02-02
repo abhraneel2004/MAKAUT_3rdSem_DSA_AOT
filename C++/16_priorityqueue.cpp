@@ -42,17 +42,16 @@ public:
 	{
 		if (!front)
 		{
-			cout << "Empty" << endl;
+			cout << "The queue is Empty" << endl;
 			return;
 		}
 		Node *temp = front;
-		while (temp->next != NULL)
+		while (temp != NULL)
 		{
-			cout << "<" << temp->data << ":" << temp->priority << "> -> ";
+			cout << "[" << temp->data << ":" << temp->priority << "] -> ";
 			temp = temp->next;
 		}
-		cout << "<" << temp->data << ":" << temp->priority << ">"
-			 << " -> NULL\n";
+		cout<< "NULL\n";
 		return;
 	}
 
@@ -60,7 +59,7 @@ public:
 	{
 		if (!front)
 		{
-			cout << "Nothing to delete\n";
+			cout << "The Queue is empty.\n";
 			return;
 		}
 		Node *temp = front;
@@ -117,9 +116,10 @@ int main(void)
 			p.delfront();
 			break;
 		case 5:
-			cout << p.countNode() << endl;
+			cout <<"Total count of node is :"<< p.countNode() << endl;
 			break;
 		case 6:
+            cout<<"Exiting the program.";
 			break;
 		default:
 			cout << "Invalid choice\n";

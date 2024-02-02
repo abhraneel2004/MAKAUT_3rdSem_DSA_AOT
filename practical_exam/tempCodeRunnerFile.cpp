@@ -1,2 +1,0 @@
-
-        cout<<temp->data<<endl;

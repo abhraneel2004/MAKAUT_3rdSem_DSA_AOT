@@ -56,12 +56,6 @@ class QueueLL{
 
             }
 
-            void peek(){
-                if(!head){return;}
-                Node* temp = head;
-                while(temp->next) temp = temp->next;
-                cout<<temp->data<<endl;
-            }
 			
 			void display(){
 				if (head==NULL) return;

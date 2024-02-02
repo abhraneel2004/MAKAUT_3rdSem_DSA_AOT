@@ -35,6 +35,7 @@ class CLL{
         Node * temp = new Node(data);
         if(!last){
             last = temp;
+            last->next = temp;
         }
         else{
             temp->next = last->next;

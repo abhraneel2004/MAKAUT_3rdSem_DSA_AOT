@@ -54,10 +54,7 @@ public:
         {
             return;
         }
-        Node *temp = head;
-        while (temp->next)
-            temp = temp->next;
-        cout << temp->data << endl;
+        cout << head->data << endl;
     }
 
     void display()

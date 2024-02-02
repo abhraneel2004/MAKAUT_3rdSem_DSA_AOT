@@ -48,31 +48,46 @@ class CLL{
             cout<<"Empty List\n";
             return;
         }
-        Node * temp = last;
-        while(temp->next!=last->next){
-            temp = temp->next;
+        Node * temp = last->next;
+        while(temp!=last){
             cout<<temp->data<<"-> ";
+            temp = temp->next;
         }
-        //cout<<temp->data<<endl;
+        cout<<temp->data<<endl;
     }
 
     void delBeg(){
-
-    }
-    void delEnd(){
-
-    }
-    void search(int data){
         if(!last){
             cout<<"Empty List\n";
             return;
         }
+        if (last->next == last){
+            last = NULL;
+            return;
+        }
         Node * temp = last->next;
-        while(temp->next!=last->next->next){
-            cout<<temp->data<<"-> ";
+        cout<<"Deleted Data: "<<temp->data<<endl;
+        last->next = temp->next;
+        delete temp;
+    }
+    void delEnd(){
+        if(!last){
+            cout<<"Empty List\n";
+            return;
+        }
+        if (last->next == last){
+            last = NULL;
+            return;
+        }
+        Node * temp = last;
+        while(temp->next!=last){
             temp = temp->next;
         }
-        
+            
+        cout<<"Deleted Data: "<<temp->next->data<<endl;
+        temp->next = last->next;
+        last = temp;
+
     }
 };
 
@@ -81,7 +96,7 @@ int main(void){
     CLL cl;
     int c,data;
     do{
-        cout<<"\n---------\n1. Insert At begin\n2. Insert At end\n3. Display\n10. Exit\n-------\n";
+        cout<<"\n---------\n1. Insert At begin\n2. Insert At end\n3. Display\n4. Delete from begin\n5. Delete from End\n6. Exit\n-------\n";
         cout<<"Enter your choice: ";
         cin>>c;
         switch(c){
@@ -98,9 +113,16 @@ int main(void){
             case 3:
                 cl.display();
                 break;
-            case 10:
+            case 4:
+                cl.delBeg();
+                break;
+            case 5:
+                cl.delEnd();
+                break;
+            case 6:
                 cout<<"Exiting the program\n";
                 break;
         }
-    }while(c!=10);
+    }while(c!=6);
+    return 0;
 }

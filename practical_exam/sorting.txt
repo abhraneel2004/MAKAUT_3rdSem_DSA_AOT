@@ -120,3 +120,78 @@ void mergeSort(int arr[], int si, int ei){
 ----------------------------------------------------
 ----------------------------------------------------
 
+void maxHeap(int a[], int i, int n){
+    int l = 2*i+1;
+    int r = 2*i+2;
+    int largest = i;
+    if(l<n && a[l]>a[largest]){
+        largest = l;
+    }
+    if(r<n && a[r]>a[largest]){
+        largest = r;
+    }
+    if(largest!=i){
+        int temp = a[largest];
+        a[largest] = a[i];
+        a[i] = temp;
+        maxHeap(a,largest, n);
+    }
+}
+
+void heapify(int a[], int n){
+    int i, temp;
+    for(i = n/2-1; i>=0; i--){
+        maxHeap(a, i,n);
+    }
+}
+
+void heapSort(int a[], int n){ // n=index so give 1 less than size
+    heapify(a,n);
+    int i, temp;
+    for(i = n-1; i>=1; i--){
+        temp = a[i];
+        a[i] = a[0];
+        a[0] = temp;
+        maxHeap(a, 0, i);
+    }
+}
+
+==================================================
+
+
+
+
+
+
+
+
+void insertionSort(int a[], int n){
+    int j;
+    for(int i = 1; i<n; i++){
+        int key = a[i];
+        j = i-1;
+        while(j>=0 && a[j]>key){
+            a[j+1] = a[j];
+            j--;
+        }
+        a[j+1] = key;
+    }
+}
+
+
+
+void selectionSort(int a[], int n){
+    for(int i = 0; i<n-1; i++){
+        int min = i;
+        for(int j = i+1; j<n; j++){
+            if(a[min]>a[j]){
+                min = j;
+            }
+        }
+        if (min!=i){
+            int temp = a[i];
+            a[i] = a[min];
+            a[min] = temp;
+        }
+    }
+}

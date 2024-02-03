@@ -154,6 +154,66 @@ public:
     {
         return root;
     }
+
+    void deleteEle(int key){
+        if(!root)
+            return;
+        Node * curr = root;
+        Node * parent = NULL;
+        while(curr){
+            parent = curr;
+            if(curr->data<key){
+                curr = curr->lchild;
+            }
+            else{
+                curr = curr->rchild;
+            }
+        }
+        if(!curr){
+            cout<<"Element Not Found\n";
+            return;
+        }
+        if(!curr->lchild || !curr->rchild){
+            //external node
+            Node * ptr;
+            if(!curr->lchild){
+                ptr = curr->rchild;
+            }
+            else{
+                ptr = curr->lchild;
+            }
+            if(!parent){
+                delete root;
+                root = ptr;
+                return;
+            }
+            else if(curr==parent->lchild){
+                parent->lchild = ptr;
+            }
+            else if(curr==parent->rchild){
+                parent->rchild = ptr;
+            }
+            delete curr;
+            return;
+        }
+        else{
+            Node *succ = curr->rchild;
+            Node *pSucc = nullptr;
+            while(succ->lchild){
+                pSucc = succ;
+                succ = succ->lchild;
+            }
+            curr->data = succ->data;
+            if(!pSucc){
+                curr->rchild = succ->rchild;
+            }
+            else{
+                pSucc->lchild = succ->lchild;
+            }
+            delete succ;
+            return;
+        }
+    }
 };
 
 int main(void)
@@ -211,7 +271,11 @@ int main(void)
         case 10:
             cout << "Height of the Tree is: " << b.height(b.getroot()) << endl;
             break;
-
+        case 11:
+            cout<<"Enter a tree element to delete: ";
+            cin>>data;
+            b.deleteEle(data);
+            break;
         case 12:
             cout << "Exiting the Program" << endl;
             break;

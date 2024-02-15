@@ -1,7 +1,12 @@
-# Data Structures and Algorithms in C/C++/Python
+<div align = "center">
+<h1><span> <img src="https://github.com/abhraneel2004/MAKAUT_3rdSem_DSA_AOT/assets/115551450/ef1fc712-8258-4065-a882-abd15e561012" style="width: 5%;"> Data Structures and Algorithms in C/C++/Python</h1> </span>
+</div>
+
 Welcome to the Data Structures and Algorithms repository! This repository contains implementations of various data structures and algorithms in C and C++. Whether you're a beginner looking to learn or an experienced developer seeking reference implementations, you've come to the right place.
 
-## Table of Contents
+<div>
+<h2><span> <img src="https://github.com/abhraneel2004/MAKAUT_3rdSem_DSA_AOT/assets/115551450/2e39f1be-c1fb-4d66-8a83-175b8c432b3f" style="width: 5%;"> Table of Contents</h2> </span>
+</div>
 
 1. [Array](#array)
 2. [Stack using Array](#stack-using-array)
@@ -26,7 +31,10 @@ Welcome to the Data Structures and Algorithms repository! This repository contai
 21. [Merge Sort](#merge-sort)
 22. [Heap Sort](#heap-sort)
 
-## Installation and Setup
+
+<div>
+<h2><span> <img src="https://github.com/abhraneel2004/MAKAUT_3rdSem_DSA_AOT/assets/115551450/6725a58a-baaa-467d-9069-35aab3f3bef6" style="width: 3%;"> Installation and Setup</h2> </span>
+</div>
 
 ### 1. MinGW g++ Compiler
 
@@ -44,7 +52,9 @@ pacman -S mingw-w64-x86_64-gcc
 
 Download and install [Visual Studio Code](https://code.visualstudio.com/). This repository is configured with a `.vscode` folder containing useful settings for your coding environment.
 
-## Running the Code
+<div>
+<h2><span> <img src="https://github.com/abhraneel2004/MAKAUT_3rdSem_DSA_AOT/assets/115551450/1c115655-468b-442b-a379-a571ded16107" style="width: 3%;"> Running the Code</h2> </span>
+</div>
 
 Navigate to the specific directory of the code you want to run and use the following commands:
 
@@ -64,7 +74,9 @@ g++ filename.cpp -o output_name
 ./output_name
 ```
 
-## Contributing
+<div>
+<h2><span> <img src="https://github.com/abhraneel2004/MAKAUT_3rdSem_DSA_AOT/assets/115551450/7c437a5b-2f8e-426a-bf5a-290ad2c3d99a" style="width: 3%;"> Contributing</h2> </span>
+</div>
 
 We welcome contributions from the community! To contribute to this project, follow these steps:
 
@@ -76,7 +88,10 @@ We welcome contributions from the community! To contribute to this project, foll
 
 Certainly! Below is an explanation of the commands for forking and contributing to a GitHub repository, formatted for easy copying and pasting:
 
-## Forking the Repository
+
+<div>
+<h2><span> <img src="https://github.com/abhraneel2004/MAKAUT_3rdSem_DSA_AOT/assets/115551450/ec813301-09b4-4c04-9730-b84df7f2fbd3" style="width: 3%;"> Forking the Repository</h2> </span>
+</div>
 
 1. **Fork the repository:** Click the "Fork" button at the top right of the repository page. This creates a copy of the repository in your GitHub account.
 
@@ -134,14 +149,20 @@ Certainly! Below is an explanation of the commands for forking and contributing 
 
    ![Create Pull Request](gifs/create_pr.gif)
 
-## Points to remember:
+<div>
+<h2><span> <img src="https://github.com/abhraneel2004/MAKAUT_3rdSem_DSA_AOT/assets/115551450/c65c4a88-e884-45ab-916c-2fe481de6c23" style="width: 3%;"> Points to remember:</h2> </span>
+</div>
+   
 - Add only code file
 - Do not add .exe or .out file
 
 
 ![Open Source GIF](gifs/open_source.gif)
 
-## Acknowledgments
+
+<div>
+<h2><span> <img src="https://github.com/abhraneel2004/MAKAUT_3rdSem_DSA_AOT/assets/115551450/a8da64a4-fbc7-44ec-97ce-ef38135d0b1a" style="width: 4%;"> Acknowledgements</h2> </span>
+</div>
 
 We appreciate the open-source community and contributors for making this project better every day. Special thanks to [GitHub](https://github.com/) for providing an excellent platform for collaboration.
 
@@ -149,5 +170,6 @@ We appreciate the open-source community and contributors for making this project
 
 **Note:** Replace `filename` and `output_name` with the appropriate names for your code file and desired output executable.
 
-
-<img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" alt="Coding GIF" style="width: 100vw; overflow:hidden; " >
+<div align = "center">
+<img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" alt="Coding GIF" style="width: 50vw; overflow:hidden; " >
+</div>

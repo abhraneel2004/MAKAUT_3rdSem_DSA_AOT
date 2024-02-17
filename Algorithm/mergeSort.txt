@@ -1,0 +1,43 @@
+algorithm merge(array, low, mid, high){
+	idx1:=low
+	idx2:=mid+1
+	x := 0
+	merged[high-low+1]
+	until idx1<=mid and idx2<=high{
+		if (array[idx1]>array[idx2]){
+			merged[x]=array[idx2]
+			x:=x+1
+			idx2:=idx2+1
+		}
+		else(array[idx2]>array[idx1]){
+			merged[x]=array[idx1]
+			x:=x+1
+			idx1:=idx1+1
+		}
+	}
+	until idx1<=mid{
+		merged[x]=array[idx1]
+		x:=x+1
+		idx1:=idx1+1
+	}
+	until idx2<=mid{
+		merged[x]=array[idx2]
+		x:=x+1
+		idx1:=idx1+2
+	}
+	
+	i = low
+	while (i<high-low+1){
+		array[low+i] = merged[i]
+		i:=i+1
+	}
+}
+
+algorithm mergeSort(array, low , high){
+	if (low<high){
+		mid = low + (high-low)/2
+		mergeSort(array, low, mid)
+		mergeSort(array, mid+1, high)
+		merge(array, low, mid, high)
+	}
+}

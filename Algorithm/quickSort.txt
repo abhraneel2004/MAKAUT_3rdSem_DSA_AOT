@@ -1,0 +1,25 @@
+algorithm partition(arr, low, high){
+
+	pivot:= arr[low]
+	j:=low
+	for i = low+1 to high step 1{
+		if (arr[i]<pivot){
+			j:=j+1
+			exchange arr[i] and arr[j]
+		}
+	}
+	if j!=low
+		exchange arr[j] and arr[low]
+	
+	return j
+}
+
+
+
+algorithm quickSort(arr, low, high){
+	if high>low{
+		j:= partition(arr, low, high)
+		quickSort(arr, low, j-1)
+		quickSort(arr, j+1, high)
+	}
+}

@@ -1,0 +1,11 @@
+Dijkstra(G)
+	for each vertex v ϵ V   
+		d[v] = ∞
+
+	d[S] = 0; S = Φ; Q = V;  //S = B ; Q = {A,B,C,D,E,F}
+	while (Q ≠ Φ)
+		u = ExtractMin(Q) 
+		S = S ∪ {u};
+		for each v ϵ Adj[u]
+			if (d[v] > d[u] + w(u,v)
+				d[v] = d[u] + w(u,v);

@@ -1,0 +1,9 @@
+Algorithm linearSearch(arr,key,n){
+    for i:=0 to n step 1{
+        if (arr[i]=key){
+            return i
+        }
+    }
+
+    return -1
+}

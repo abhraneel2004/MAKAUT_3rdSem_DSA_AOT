@@ -1,0 +1,30 @@
+algorithm maxHeap(arr, i,n){
+	l = 2*i+1
+	r = 2*i+2
+	largest = i
+	if l<n and arr[l]>arr[largest]{
+		largest = l
+	}
+	if r<n and arr[r]>arr[largest]{
+		largest = r
+	}
+	if largest!=i{
+		exchange arr[largest] and arr[i]
+		maxHeap(arr, largest, n)
+	}
+}
+
+algorithm heapify(arr,n){
+	for i:= n/2 to 1 step -1{
+		maxheap(arr, i, n)
+	}
+
+}
+
+algorithm heapSort(arr, n){
+	heapify(arr, n)
+	for i:=n to 2 step -1{
+		exchange arr[i] and arr[1]
+		maxheap(arr, 1, i-1)
+	}
+}

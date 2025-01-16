@@ -20,16 +20,15 @@ class DLL{
         head = NULL;
     }
     void insert_at_beginning(int value){
-        Node * newnode = new Node(value);
-        if (!head){
-            newnode->next = head;
+        Node * newnode = new node(value);
+        if(!head){
             head = newnode;
             return;
         }
-        head->prev = newnode;
         newnode->next = head;
+        head->prev = newnode;
         head = newnode;
-        return;
+        return; 
     }
 
     void insert_at_end(int value){
